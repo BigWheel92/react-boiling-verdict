@@ -54,19 +54,19 @@ class TemperatureCalculatorComp extends React.Component{
         this.setState({temperatureC: '', temperatureF: ''});
     }
     
-    handleFahrenheitValueChange=_temperatureF=>
+    handleFahrenheitValueChange=temperatureF=>
     {
-        _temperatureF=Number.parseFloat(_temperatureF)
+        temperatureF=Number.parseFloat(temperatureF)
 
-        let _temperatureC=fahrenheitToCelsius(Number.parseFloat(_temperatureF));
-        this.setState({temperatureC: _temperatureC, temperatureF: _temperatureF })
+        let temperatureC=fahrenheitToCelsius(Number.parseFloat(temperatureF));
+        this.setState({temperatureC, temperatureF})
     }
 
-    handleCelsiusValueChange=_temperatureC=>
+    handleCelsiusValueChange=temperatureC=>
     {
-        _temperatureC=Number.parseFloat(_temperatureC)
-        let _temperatureF= celsiusToFahrenheit(_temperatureC);
-        this.setState({temperatureC: _temperatureC, temperatureF: _temperatureF })
+        temperatureC=Number.parseFloat(temperatureC)
+        let temperatureF= celsiusToFahrenheit(temperatureC);
+        this.setState({temperatureC, temperatureF})
     }
 
     render=()=>
