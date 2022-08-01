@@ -23,7 +23,7 @@ class TemperatureInputComp extends React.Component {
         super(props);
     }
 
-    onTextChangeHandler=(e)=>
+    onTextChangeHandler=e=>
     {
         if (e.target.value.length==0)
          this.props.blank();
@@ -31,7 +31,7 @@ class TemperatureInputComp extends React.Component {
         this.props.onTemperatureChange(e.target.value)
     }
 
-    render()
+    render=()=>
     {
         return (
             <fieldset>
@@ -69,7 +69,7 @@ class TemperatureCalculatorComp extends React.Component{
         this.setState({temperatureC: _temperatureC, temperatureF: _temperatureF })
     }
 
-    render()
+    render=()=>
     {   
 
         let boilOrNot="";
